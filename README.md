@@ -1,13 +1,14 @@
 # prep
 
-Template litrals `${}`
+Template litrals `${}` <br><br><br>
 
-DIfference between let, var, const
+### DIfference between let, var, const
 
 Var: can be accessable from anywhere within a function
 
 example: 
 
+````javascript
 function fun(){
 
 if(true){
@@ -19,12 +20,16 @@ if(true){
 console.log(a)
 
 }
+````
+<br><br><br>
 
 Var: it can be redeclared with same name
 
+````
 var a = 14;
 
 var a = 15;
+````
 
 let: it can only be accessable within a block of code
 
@@ -34,9 +39,9 @@ const: it can also only accessable within a block of code
 
 can't be redeclared with same name
 
-also can't reassign a value to it
+also can't reassign a value to it <br><br><br>
 
-Difference between map and foreach
+### Difference between map and foreach
 
 Map: It not modify the original array it return new array
 
@@ -46,30 +51,33 @@ it can be writen in single line
 
 Foreach: it modify the original array
 
-no need to return anything
+no need to return anything <br><br><br>
 
-Event bubbling: it happens bottom to top
+#### Event bubbling: it happens bottom to top
 
-Event Capturing: it happens top to bottom
+#### Event Capturing: it happens top to bottom <br><br><br>
 
 
 
-Higher Order Function (HOC)
+### Higher Order Function (HOC)
 
 A Higher-Order Function (HOF) is a function that does at least one of the following:
 
 Takes one or more functions as arguments. () => {}
 
 Returns a function as its result.
-
+````
 map(), filter(), reduce(): These are HOFs because they take a callback function as an argument.
 
 const numbers = [1, 2, 3]; const doubled = numbers.map(num => num * 2); // map takes a function
 
 setTimeout(() => console.log("Hello"), 1000); // setTimeout takes a function
+````
 
-Immediately Called Function
+<br><br><br>
 
+### Immediately Called Function
+````
 (function(){
 
 console.log("hello")
@@ -77,11 +85,12 @@ console.log("hello")
 }
 
 )()
-
-Closures
+````
+<br><br><br>
+### Closures
 
 It remembers it's lexical environment even if the parent function got finish executing
-
+````
 function outerFunction() {
 
   const outerVariable = "I am from the outer function!";
@@ -98,6 +107,7 @@ function outerFunction() {
 
 }
 
+
 // When we call outerFunction, it returns innerFunction.
 
 // The outerFunction has already finished executing.
@@ -109,43 +119,58 @@ const myClosure = outerFunction();
 // even though outerFunction's execution context is long gone.
 
 myClosure(); // Output: I am from the outer function!```
+````
 
-Promises
+<br><br><br>
+
+### Promises
 
 Helps to handle asynchronous tasks
 
 they return three states Pending, Fulfilled and rejected
 
-Asyn Await
+<br><br><br>
+
+### Asyn Await
 
 it's a simpler way of doing asynchronious tasks as comparison to the promises so async tell that a functions is a asynchronous and await will wait until the promise got resolved
 
-Reduce Function
+<br><br><br>
+
+### Reduce Function
 
 it's used to calculate the array of numbers
-
+````
 const nums = [1, 2, 3, 4]
 
 console.log(nums.reduce((a,b) => a + b));
+````
 
-Weak Map
+<br><br><br>
+
+### Weak Map
 
 it helps to store temporary data in object type
 
-Weak Set
+<br><br><br>
+
+### Weak Set
 
 it helps to store temporary data but it does not allow duplicate values to be stored
 
-Shallow Copy
+<br><br><br>
+
+### Shallow Copy
 
 when you change the actual object data
-
-Deep copy
+<br><br><br>
+### Deep copy
 
 when you firstly create a copy of a data array or object and then you make changes to that copy data
+<br><br><br>
+### Array Methods
 
-Array Methods
-
+```
 toString()
 
 slice()
@@ -170,38 +195,46 @@ includes()
 
 splice(0,1) will delete those items withing that range in actual array
 
-slice(0,1) will slice the item from an actual array and create new array 
+slice(0,1) will slice the item from an actual array and create new array
+```
 
-Typescript
+<br><br><br>
+
+### Typescript
 
 object oriented 
 
 typesafe
 
-Disadvantages
+<br><br><br>
+
+### Disadvantages
 
 Takes to much time to compile
 
 it's bit complex
 
-Extend
+<br><br><br>
+
+### Extend
 
 allow to extend existing type and add new type into it
-
-Interface
+<br><br><br>
+### Interface
 
 allow to extend the data types but not let you override existing type
-
-Type 
+<br><br><br>
+### Type 
 
 allow to extend the data types also allow to override 
-
-Generics
+<br><br><br>
+### Generics
 
 <T> allow to dynamically pass data types
+<br><br><br>
+### Pattrens
 
-Pattrens
-
+```
 const pattren = (n) => {
 
   let count = 0;
@@ -234,6 +267,10 @@ pattren(5);
 
 *****
 
+````
+<br><br><br>
+
+````
 const pattren = (n) => {
 
   let count = 0;
@@ -266,6 +303,11 @@ pattren(5);
 
 *****
 
+````
+
+<br><br><br>
+
+````
 const pattren = (n) => {
 
   let count = 0;
@@ -297,7 +339,11 @@ pattren(5);
 **
 
 *
+````
 
+<br><br><br>
+
+````
 const pattren = (n) => {
 
   let count = 0;
@@ -330,6 +376,10 @@ pattren(5);
 
 7 8 9 10
 
+````
+
+<br><br><br>
+````
 const patterns = (n) => {
 
   for(let i = n; i > 0; i--){
@@ -361,7 +411,11 @@ patterns(5);
 21 
 
 1
+````
 
+<br><br><br>
+
+````
 const patterns = (n) => {
 
     
@@ -400,27 +454,30 @@ patterns(5);
 1 0 1 
 0 1 0 1 
 1 0 1 0 1
-
-Spread Operator
+````
+<br><br><br>
+# Spread Operator
 
 it's used to spread out the content usually user for shallow copy array
 
+````
 const originalArray = [1, 2, 3]; 
 
 const copiedArray = [...originalArray];
-
-Rest Operator
+````
+<br><br><br>
+### Rest Operator
 
 it helps to get the rest remaining data items
-
+````
 function sumAll(1, 2, ...numbers) { console.log(numbers); // numbers will be an array return
-
+````
 mainly used as function argument, destructuring array or object
-
-Debouncing
+<br><br><br> 
+### Debouncing
 
 Debouncing ensures that a function is not called until a certain amount of time has passed without any further activity. It effectively delays the execution of a function until the user "stops doing something." If the event fires again before the delay has elapsed, the timer is reset, and the function call is delayed again.
-
+````
   const inputRef = useRef();
 
   const searchDebounce = useCallback((value) => {
@@ -438,27 +495,29 @@ Debouncing ensures that a function is not called until a certain amount of time 
     },2000)
 
   },[]);
-
-Throttling
+````
+<br><br><br>
+### Throttling
 
 in this it ensures that a functionality happens after certain interval ensure minimum time between executions
+<br><br><br>
 
-useCallback
+### useCallback
 
 useCallback is a hook that helps to memoize a function. it only re render the function if the dependancy array has changed
-
-useMemo
+<br><br><br>
+### useMemo
 
 it's is used to memoize a value only if some change happens to it's dependancy array item only that it recalculates the value it's manly used for calculating large values
-
-Logical Questions
-
+<br><br><br>
+### Logical Questions
+<br><br><br>
 Find even or odd number
 
 Find largest num in array
-
-Reverse a string
-
+<br><br><br>
+### Reverse a string
+````
 const reverseString = (str) => {
 
   const res = str.split("").reverse().join("");
@@ -487,8 +546,12 @@ const reverseString = (str) => {
 
 console.log(reverseString("hello"))
 
-Check if a string is a palindrome
+````
 
+<br><br><br>
+
+### Check if a string is a palindrome
+````
 // "madam" -> true
 
 // "hello" -> false
@@ -502,9 +565,10 @@ const checkPalindrome = (str) => {
 }
 
 console.log(checkPalindrome("mom"))
-
-Find factorial of a number
-
+````
+<br><br><br>
+### Find factorial of a number
+````
 // 5! = 5*4*3*2*1 = 120
 
 const checkFactorial = (num) => {
@@ -523,6 +587,10 @@ const checkFactorial = (num) => {
 
 console.log(checkFactorial(5))
 
+````
+
+<br><br><br>
+````
 Find the Fibonacci sequence up to n terms
 
 // n=5 -> [0, 1, 1, 2, 3]
@@ -565,8 +633,12 @@ const generateFibonacci = (n) => {
 
 console.log(generateFibonacci(10))
 
-Remove duplicates from an array
+````
 
+<br><br><br>
+
+### Remove duplicates from an array
+````
 // [1,2,2,3,4,4,5] -> [1,2,3,4,5]
 
 const removeDuplicates = (nums) => {
@@ -601,8 +673,12 @@ const removeDuplicates = (nums) => {
 
 console.log(removeDuplicates([1,2,2,3,4,4,5, 6]))
 
-Find the second largest number in an array
+````
 
+<br><br><br>
+
+### Find the second largest number in an array
+````
 // [10, 20, 4, 45, 99] -> 45
 
 const findSecondLargeNum = (nums) => {
@@ -650,9 +726,12 @@ const findSecondLargeNum = (nums) => {
 }
 
 console.log(findSecondLargeNum([10, 20, 4, 45, 99, 46]))
+````
 
-Check if two strings are anagrams
+<br><br><br>
 
+### Check if two strings are anagrams
+````
 // "listen" & "silent" -> true
 
 // "hello" & "world" -> false
@@ -672,9 +751,10 @@ const checkAnagrams = (str1, str2) => {
 }
 
 console.log(checkAnagrams("listen", "silent"))
-
-Count vowels in a string
-
+````
+<br><br><br>
+### Count vowels in a string
+````
 // "javascript" -> 3
 
 const countVowelsIterative = (str) => {
@@ -705,8 +785,12 @@ const countVowelsIterative = (str) => {
 
 console.log(countVowelsIterative("javascript"))
 
-Flatten a nested array
+````
 
+<br><br><br>
+
+### Flatten a nested array
+````
 // [1, [2, [3, 4]], 5] -> [1, 2, 3, 4, 5]
 
 const flatArray = (str) => {
@@ -723,6 +807,10 @@ const flatArray = (str) => {
 
 console.log(flatArray())
 
+````
+
+<br><br><br>
+````
 // Problem:
 
 // You are given an array of transactions. Each transaction has a userId, amount, and type (either "credit" or "debit").
@@ -901,9 +989,11 @@ const finalRes = Object.values(res).map((item) => {
 });
 
 console.log(finalRes);
+````
 
-Find first non repeating char
-
+<br><br><br>
+### Find first non repeating char
+```
 const checkFirstNonRepeatingChar = (str) => {
 
   
@@ -961,111 +1051,114 @@ const checkFirstNonRepeatingChar = (str) => {
 }
 
 console.log(checkFirst("sawiss"));
+````
 
-Cookie
+<br><br><br>
+
+#### Cookie
 
 cookie get send back by the server to the web browser then in every https requrest the cookie automaticallly got sent by the browser to server it has expiration date 4kb
 
+<br><br><br>
 
 
-
-Local storage
+### Local storage
 
  aslo used to store info but it get stored only via the client side in broswers size 5 to 10 mb and no expiration
-
-Session Storage
+<br><br><br>
+### Session Storage
 
 
 
 is similar to the local storage but user to store temoparry data only as when user closes the tab or window session storage got clear
-
-Mongo Db Replication
+<br><br><br>
+### Mongo Db Replication
 
 means duplicating same data across multiple different mongodb servers
-
-MongoDb Shadering
+<br><br><br>
+### MongoDb Shadering
 
 distributing data across mulitple databases mongodb supports
 
 for example 2 millions data 1 million store to one database another 1 million stoer to another
-
-Vertical Scaling 
+<br><br><br>
+### Vertical Scaling 
 
 is like adding more ram, cpus to the database server
-
-Horizontal Scaling
+<br><br><br>
+### Horizontal Scaling
 
 refers to adding more virtual machines or server for the database it's also called shadering
-
-Map Reduce
+<br><br><br>
+### Map Reduce
 
 "map reduce helps to count out something we want to count via across different documents": Exactly! Its primary purpose is to process data across many documents to derive aggregated results or counts.
 
 "map first find out all the things we are looking for and seperate them in key value pairs": Correct. The "map" stage iterates through each document, identifies the piece of information you're interested in (the "key"), and associates a specific "value" with it. It prepares the data for the next step.
 
 "reduce will combine those and give us the actual count": Spot on! The "reduce" stage then takes all the values that share the same key and aggregates them (sums them, counts them, averages them, etc.) to produce the final, summarized result for that key.
-
-GridFs
+<br><br><br>
+### GridFs
 
 grid file system in mongodb helps to store and reterive large files like images, videos, documents
 
 Instead of storing a large file as a single document, GridFS divides the file into smaller parts, called chunks, and stores each chunk as a separate document. By default, the chunk size is 255 kB, though this can be configured
-
-Primary key and Secondary Key
+<br><br><br>
+### Primary key and Secondary Key
 
 primary key is uniques identyfire _id
-
+<br><br><br>
 secondary key is used for indexing and query a data
-
-Streams
+<br><br><br>
+### Streams
 
 in nodejs refers to reading large amount of data in chunks rather then reading whole data once
-
-Cluster
+<br><br><br>
+### Cluster
 
 cluster in nodejs about creating multiple node servers and distuributing the requests across those server?
-
-Server-Side Rendering (SSR) - "Pre-built Webpages"
+<br><br><br>
+### Server-Side Rendering (SSR) - "Pre-built Webpages"
 
 What happens: When you ask for a webpage, the server (the "restaurant kitchen") builds the entire page with all the text, pictures, and buttons right there.
 
 What you get: It then sends that complete, ready-to-look-at page directly to your web browser (your "plate").
 
 Result: You see the page very quickly because it's already finished.
-
-Client-Side Rendering (CSR) - "Build-It-Yourself Webpages"
+<br><br><br>
+### Client-Side Rendering (CSR) - "Build-It-Yourself Webpages"
 
 What happens: When you ask for a webpage, the server (the "delivery service") sends you a tiny, almost empty page along with a bunch of instructions (called JavaScript).
 
 What you get: Your web browser (your "kitchen") then takes those instructions and builds the page itself right there on your computer, fetching ingredients (data) as needed.
 
 Result: It takes a moment for your browser to build everything, but once it's done, it's very interactive.
-
-Data assets 
+<br><br><br>
+### Data assets 
 
 the valuable information that an organization stores and manages within its databases.
-
-trpc full form
+<br><br><br>
+### trpc full form
 
 TypeScript Remote Procedure Call
-
-Hashing
+<br><br><br>
+### Hashing
 
 Hashing is a one way process once done it can't be reverse backed generally used for password hashing
-
-Encryption
+<br><br><br>
+### Encryption
 
 Encryption is a two way process it created via a secret key and any plain text you want to encrypt it can decrypt using the same secret key
-
-Authentication
+<br><br><br>
+### Authentication
 
 it's about checking whether you are valid user or not it checks via the username email password you enter for login if everthing is correct then you are authenticated
-
-Authorization
+<br><br><br>
+### Authorization
 
 is a process where we check after authentication what things you are allowed to access for example if you are  a simple user and trying to access admin features then you should not be able to access those via proper authorization
-
-Primitive Data Types
+<br><br><br>
+### Primitive Data Types
 
 they are simple data types
 
@@ -1080,8 +1173,8 @@ Boolean
 float
 
 undefined/null
-
-Non-Primitive Data Types
+<br><br><br>
+### Non-Primitive Data Types
 
 they are more complex and advanced data types
 
@@ -1090,8 +1183,8 @@ array
 object
 
 functions
-
-Pass by value
+<br><br><br>
+### Pass by value
 
 Premitive Data types
 
@@ -1100,16 +1193,16 @@ let a = 5;
 let b = a;
 
 b = a + 5;
-
+<br><br>
 both will work independently in pass by value if we change something it only applies for that variable no other value get changed
+<br><br><br>
+### Pass by reference
 
-Pass by reference
-
-Non premitive data types
+### Non premitive data types
 
 in this suppose we create two objs and second one is referencing the first one so if we change something inside the obj2  it will reflect in obj1 as well
-
-Mongodb query optimization
+<br><br><br>
+### Mongodb query optimization
 
 use the indexing
 
@@ -1118,25 +1211,25 @@ single field indexing
 compound indexing (multiple fields indexing)
 
 we can also use the sort(), limit(), aggregations methods as well
-
-Cleanup Function
+<br><br><br>
+### Cleanup Function
 
 it's basically used inside the useeffect when we want to stop the process that's going inside the useeffect we just return at the end of the useeffect logic
-
-Composition in React
+<br><br><br>
+### Composition in React
 
 is basically means to creating separate components for the sections to increase readability and reusability
-
-Virtual Dom
+<br><br><br>
+### Virtual Dom
 
 is a lightweight copy of the real dom whenever any state or data got changed inside the reactjs it firstly got changed insid the virtual dom then react uses diffing algorithm to check the difference between the vdom and real dom and then it only changes the that section that differs not the entire dom
-
-State
+<br><br><br>
+### State
 
 it contains any data for a component that in future can get changed
 
 Component Lifecycles
-
+````
 ComponentDidMount();
 
 componentDidUpdate();
@@ -1144,28 +1237,29 @@ componentDidUpdate();
 componentWillUnmount():
 
 shouldComponentUpdate() is way to manually define whether a component should update or not
-
-side effects in React
+````
+<br><br><br>
+### side effects in React
 
 are the operations that interacts outside of the react for like api requests, timers, dom, console.log()
-
-synthetic event" in React?
+<br><br><br>
+### synthetic event" in React?
 
 stopPropagation() and preventDefault()
-
-reconciliation" in React?
+<br><br><br>
+### reconciliation" in React?
 
 is used in react to check the difference in the virtual dom and real dom if any changes found it updated the real dom only that part of the tree
-
-Portals in React?
+<br><br><br>
+### Portals in React?
 
 in react is used for the modals, tooltips, dialouges, so it's a way to create dom element outside the dom hierarchy
-
-What is a bundler (e.g., Webpack, Vite) and why is it used in React projects?
+<br><br><br>
+### What is a bundler (e.g., Webpack, Vite) and why is it used in React projects?
 
 A bundler (like Webpack or Vite) is a tool that processes and optimizes the assets of a web application (JavaScript, CSS, HTML, images, etc.) by packaging them into deployable bundles
-
-Babel in Reactjs
+<br><br><br>
+### Babel in Reactjs
 
 Babel is a js compiler that's used in react to convert the jsx into the javascript code so it can be undertood by the browsers
 
