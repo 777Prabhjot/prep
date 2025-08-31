@@ -1263,3 +1263,71 @@ A bundler (like Webpack or Vite) is a tool that processes and optimizes the asse
 
 Babel is a js compiler that's used in react to convert the jsx into the javascript code so it can be undertood by the browsers
 
+<br><br><br>
+
+### Promises
+
+````
+const hello1 = () => {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            console.log("hello 1")
+
+        },3000)
+
+    })
+
+}
+
+const hello2 = () => {
+
+    const success = false;
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            if(success){
+
+            console.log("hello 2")
+
+            }else{
+
+                reject("error from hello 2")
+
+            }
+
+        },1000)
+
+    })
+
+}
+
+const hello3 = () => {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            console.log("hello 3")
+
+        },2000)
+
+    })
+
+}
+
+Promise.all([hello1(), hello2(), hello3()]).then((result) => {
+
+    console.log(result);
+
+}).catch((error) => {
+
+    console.log(error);
+
+})
+````
+
