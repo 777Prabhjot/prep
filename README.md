@@ -1330,4 +1330,97 @@ Promise.all([hello1(), hello2(), hello3()]).then((result) => {
 
 })
 ````
+<br><br><br>
 
+### process.nextTick() callbacks: 
+
+These run immediately after the current synchronous code finishes, but before the event loop even moves on to its main phases (timers, I/O, setImmediate). They are part of the microtask queue and have the absolute highest priority for deferred execution.
+<br><br><br>
+### setImmediate() 
+
+callbacks are indeed queued to run immediately once any current I/O operations (and their associated callbacks from the poll phase) have completed within that specific iteration of the event loop, before the event loop starts a new iteration.
+
+so this will go inside the callback queue when any current io operation complemeted then it will run imediatly right
+<br><br><br>
+### If Don't want object value to be changed
+
+if we have a obj in js
+
+it have fields like name and age
+
+in code same file if i did obj.name = "something"
+
+but i don't want that the obj value got changed how can we do that
+<br><br><br>
+we can use
+````
+Object.freeze(obj); // Freeze the object
+````
+<br><br><br>
+or we can use
+````
+const obj = {};
+
+Object.defineProperty(obj, 'name', {
+
+  value: "initialName",
+
+  writable: false,     // This makes the 'name' property read-only
+
+  enumerable: true,
+
+  configurable: true
+
+});
+````
+
+<br><br><br>
+### child_process 
+
+is a built-in feature of Node.js that empowers your Node.js application to interact directly with other programs and commands available on your computer's operating system.
+<br><br><br>
+### Disadvantages of Indexing in mongo
+
+In summary, while indexes are crucial for query performance, they are not free. They consume storage, slow down writes, and require memory.
+<br><br>
+1. Increased Storage Space
+
+The Problem: Indexes are separate data structures that store a subset of the collection's data (the indexed fields and references to the documents). This means they consume additional disk space.
+<br><br>
+2. Slower Write Operations (Inserts, Updates, Deletes)
+
+The Problem: Whenever you insert a new document, update an indexed field, or delete a document, MongoDB not only has to modify the actual document but also update all associated indexes.
+<br><br><br>
+### JavaScript is a dynamically typed language.
+
+Here's what that means:
+
+Dynamically Typed: In a dynamically typed language, type checking (verifying the types of variables) happens at runtime (when the code is being executed), not at compile time.
+
+You don't need to declare the data type of a variable when you declare it.
+
+The type of a variable can change during the execution of the program.
+
+For example, a variable that initially holds a number can later hold a string.
+<br><br><br>
+Statically Typed (for contrast): In a statically typed language (like Java, C++, or TypeScript), type checking happens at compile time (before the code runs).
+
+You must declare the data type of a variable when you declare it.
+
+The type of a variable usually cannot change during the program's execution.
+
+If you try to assign a value of a different type to a variable, the compiler will typically throw an error.
+<br><br><br>
+### Sitemap
+
+just like with any other web application that aims for good search engine optimization (SEO). A sitemap helps search engines discover all the pages on your site, especially those that might not be easily found through regular crawling
+<br><br><br>
+### ForwardRef 
+
+is a React utility that lets you pass a ref from a parent component down to a child component, specifically to a DOM element or a class component instance within that child.
+<br><br><br>
+### Hydration error in Next.js
+
+A hydration error in Next.js (or any React framework that uses server-side rendering/static site generation) primarily occurs because of a mismatch between the HTML generated on the server and the HTML that React expects to render on the client side.
+
+When you use client-side specific code (like accessing window, document, localStorage, etc.) in a component that is also being rendered on the server, the server will either:
