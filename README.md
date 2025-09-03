@@ -1424,3 +1424,94 @@ is a React utility that lets you pass a ref from a parent component down to a ch
 A hydration error in Next.js (or any React framework that uses server-side rendering/static site generation) primarily occurs because of a mismatch between the HTML generated on the server and the HTML that React expects to render on the client side.
 
 When you use client-side specific code (like accessing window, document, localStorage, etc.) in a component that is also being rendered on the server, the server will either:
+
+<br><br><br>
+
+
+
+Mongoose: An Object Data Modeling (ODM)
+<br><br><br>
+ORM stands for Object-Relational Mapping.
+<br><br><br>
+### Event-driven programming 
+
+in Node.js is like a super-efficient system where things happen when certain "events" occur, and the program is always ready to react to new events without ever getting stuck waiting for one task to finish.
+<br><br><br>
+### Memory leaks 
+
+in Node.js occur when your application unintentionally holds onto references to objects that are no longer needed. This prevents the V8 JavaScript engine's garbage collector from reclaiming the memory used by those objects, leading to a continuous increase in memory consumption over time.
+<br><br>
+clear timers
+
+handle caches properly
+<br><br><br>
+### Buffers
+
+Buffers are used to convert data (especially strings) into raw binary data for efficient processing and transmission.
+file processing
+<br><br><br>
+### Fork in Nodejs
+
+In Node.js, fork refers to a specific method within the built-in child_process module: child_process.fork()
+
+When you call fork(), Node.js starts a brand new V8 (JavaScript engine) instance and a new Node.js event loop. This new process is entirely separate from your parent Node.js process.
+<br><br>
+````
+const { fork } = require('child_process');
+
+console.log(`Parent process ${process.pid} started.`);
+
+// Fork a new child process to run 'child.js'
+
+const child = fork('./child.js');
+
+child.on('message', (message) => {
+
+  console.log(`Parent received message from child: ${message}`);
+
+});
+
+child.send('Hello from parent!');
+````
+<br><br><br>
+### What is piping in NodeJS?
+
+In NodeJS, piping refers to the process of passing the output of one stream directly into another stream. It allows data to flow through multiple streams without needing to store it in memory or temporarily write it to disk. This is a common pattern used in file handling, HTTP requests, and other I/O operations in NodeJS.
+<br><br><br>
+### Explain some of the cluster methods in NodeJS
+
+Fork(): It creates a new child process from the master. The isMaster returns true if the current process is master or else false.
+
+isWorker: It returns true if the current process is a worker or else false.
+
+process: It returns the child process which is global.
+
+send(): It sends a message from worker to master or vice versa. 
+
+kill(): It is used to kill the current worker.
+<br><br><br>
+### Security in Nodejs
+
+proper authentication and authorization
+
+SQL Injection prevent via using ORM
+
+NOSQL Injections prevent via using ODM mongoose
+
+Proper inputs validations
+
+Password hashing
+
+Rate limiting express-rate-limit
+<br><br><br>
+### Scale Nodejs App
+
+Using Clusters
+
+Vertical Scaling
+
+Horizontal Scaling
+
+Load Balancing via nignix
+
+Query Optimization
